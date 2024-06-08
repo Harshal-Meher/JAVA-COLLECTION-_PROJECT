@@ -3,6 +3,7 @@ package controller;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
@@ -79,5 +80,24 @@ public class Control {
                 }
             }
         }
+        
     }
+        
+    public void Display() throws ClassNotFoundException, SQLException{
+    	
+    	Connection con=Control.Connect();
+    	
+    	PreparedStatement ps=con.prepareStatement("select * from t1");
+    	ResultSet rs=ps.executeQuery();
+    	
+    	while(rs.next()){
+    		
+    		System.out.println("Roll No : "+rs.getInt(1) +"Name : "+rs.getString(2)+"Address : "+
+    		rs.getString(3)+" Mark :"+rs.getLong(4));
+    	}
+    }
+    
+    
+        
+    
 }

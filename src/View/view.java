@@ -33,9 +33,9 @@ public class view {
 				case 1:
 					c.Insert();
 					break;
-//				case 2:
-//					c.Show();
-//					break;
+				case 2:
+					c.Display();
+					break;
 //				case 3:
 //					c.Update();
 //					break;
