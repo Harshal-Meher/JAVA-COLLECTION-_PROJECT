@@ -1,17 +1,20 @@
-package View;
+package view;
 
 import java.sql.SQLException;
 import java.util.Scanner;
 
-import controller.Control;
+import Controller.Control;
 
-public class view {
+public class View {
 
-	
-	boolean loop=true;
-	Scanner sc=new Scanner(System.in);
-	Control c=new Control();
-	
+	public View() throws ClassNotFoundException, SQLException {
+		menu();
+	}
+
+	Scanner sc = new Scanner(System.in);
+	Control c = new Control();
+	boolean loop = true;
+
 	public void menu() throws ClassNotFoundException, SQLException {
 		while (loop) {
 			try {
@@ -34,17 +37,17 @@ public class view {
 					c.Insert();
 					break;
 				case 2:
-					c.Display();
+					c.Show();
 					break;
-//				case 3:
-//					c.Update();
-//					break;
-//				case 4:
-//					c.Delete();
-//					break;
-//				case 5:
-//					c.Search();
-//					break;
+				case 3:
+					c.Update();
+					break;
+				case 4:
+					c.Delete();
+					break;
+				case 5:
+					c.Search();
+					break;
 				case 0:
 					System.out.println("thank you ~");
 					loop = false;
@@ -55,8 +58,9 @@ public class view {
 			}
 
 			catch (Exception e) {
-				System.out.println("plz try Again ---~"+e);
+				System.out.println("plz try Again ---~");
 			}
 		}
-}
+	}
+
 }

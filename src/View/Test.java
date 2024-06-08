@@ -1,13 +1,12 @@
+package view;
+
 import java.sql.SQLException;
 
-import View.view;
+public class Test {
 
-public class Test 
-{
-public static void main(String[] args) throws ClassNotFoundException, SQLException {
-	
-
-	   System.out.println("Student Mangemnet MVC PreStatement ~\n");
+	public static void main(String[] args) throws ClassNotFoundException, SQLException
+	{
+	   System.out.println("Employee Mangemnet MVC PreStatement ~\n");
 	   System.out.println("      * * *           *  * *");
 		System.out.println("    *       *       *        *");
 		System.out.println("  *           *   *            *");
@@ -23,12 +22,7 @@ public static void main(String[] args) throws ClassNotFoundException, SQLExcepti
 		System.out.println("              *     *");
 		System.out.println("                 *");
 
-	
-		
-		view v=new view();
-		v.menu();
-		
-		
-	
-  }
+       new View();
+	}
+
 }
